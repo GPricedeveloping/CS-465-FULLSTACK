@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Beach Paradise",
+    "image": "reef1.jpg",
+    "description": "Beach Paradise - Enjoy sunny beaches and crystal clear water."
+  },
+  {
+    "name": "Mountain Adventure",
+    "image": "reef2.jpg",
+    "description": "Mountain Adventure - Explore breathtaking mountain landscapes."
+  },
+  {
+    "name": "City Explorer",
+    "image": "reef3.jpg",
+    "description": "City Explorer - Discover vibrant city life and culture."
+  }
+]
