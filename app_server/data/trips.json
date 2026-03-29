@@ -1,16 +1,31 @@
 [
   {
+    "code": "BCH001",
     "name": "Beach Paradise",
+    "length": "5 days",
+    "start": "2024-06-01T00:00:00Z",
+    "resort": "Sunny Shores Resort",
+    "perPerson": "1200",
     "image": "reef1.jpg",
     "description": "Beach Paradise - Enjoy sunny beaches and crystal clear water."
   },
   {
+    "code": "MTN002",
     "name": "Mountain Adventure",
+    "length": "7 days",
+    "start": "2024-07-10T00:00:00Z",
+    "resort": "High Peak Lodge",
+    "perPerson": "1500",
     "image": "reef2.jpg",
     "description": "Mountain Adventure - Explore breathtaking mountain landscapes."
   },
   {
+    "code": "CTY003",
     "name": "City Explorer",
+    "length": "4 days",
+    "start": "2024-08-15T00:00:00Z",
+    "resort": "Downtown Hotel",
+    "perPerson": "900",
     "image": "reef3.jpg",
     "description": "City Explorer - Discover vibrant city life and culture."
   }
