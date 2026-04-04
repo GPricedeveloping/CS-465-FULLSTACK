@@ -1,29 +1,35 @@
-const Trip = require('../models/travlr');
-
 const travel = async (req, res) => {
+  const tripsEndpoint = 'http://localhost:3000/api/trips';
+  const options = {
+    method: 'GET',
+    headers: {
+      Accept: 'application/json'
+    }
+  };
+
   try {
-    const trips = await Trip.find();
+    const response = await fetch(tripsEndpoint, options);
+    const json = await response.json();
+
+    let message = null;
+
+    if (!Array.isArray(json)) {
+      message = 'API lookup error';
+    } else if (json.length === 0) {
+      message = 'No trips exist in our database!';
+    }
 
     res.render('travel', {
       title: 'Travlr Getaways',
-      trips
+      trips: json,
+      message
     });
-  } catch (err) {
-    console.log(err);
-    res.status(500).send('Error retrieving trips');
-  }
-};
 
-const tripsList = async (req, res) => {
-  try {
-    const trips = await Trip.find();
-    res.json(trips);
   } catch (err) {
-    res.status(500).json({ error: 'Error retrieving trips' });
+    res.status(500).send(err.message);
   }
 };
 
 module.exports = {
-  travel,
-  tripsList
+  travel
 };
