@@ -1,0 +1,22 @@
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label>Trip Code:</label>
+
+    <input
+      type="text"
+      formControlName="code"
+      class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f['code'].errors }"
+    />
+  </div>
+
+  <div *ngIf="submitted && f['code'].errors">
+    <div *ngIf="f['code'].errors['required']">
+      Trip Code is required
+    </div>
+  </div>
+
+  <button class="btn btn-primary">Submit</button>
+
+</form>

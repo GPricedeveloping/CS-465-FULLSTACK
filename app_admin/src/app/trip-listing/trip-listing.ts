@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { Trip } from '../models/trip';
 import { trips as TRIP_DATA } from '../data/trips';
 
+
 @Component({
   selector: 'app-trip-listing',
   standalone: true,

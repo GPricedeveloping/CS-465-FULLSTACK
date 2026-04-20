@@ -1,17 +1,14 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { TripListingComponent } from './trip-listing/trip-listing';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,TripListingComponent],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.html',
-  styleUrls: ['./app.css']
+  styleUrl: './app.css'
 })
-
 export class AppComponent {
-  title = 'Travlr Getaways Admin!';
+  title = 'Travlr Getaways Admin';
 }

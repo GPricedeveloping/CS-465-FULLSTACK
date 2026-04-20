@@ -4,9 +4,15 @@ const router = express.Router();
 const ctrlTrips = require('../controllers/trips');
 
 // GET all trips
-router.get('/trips', ctrlTrips.tripsList);
+router
+    .route('/trips')
+    .get(tripsController.tripsList)
+    .post(tripsController.tripsAddTrip);
 
 // GET single trip by code
-router.get('/trips/:tripCode', ctrlTrips.tripsFindCode);
+router
+    .route('/trips/:tripCode')
+    .get(tripsController.tripsFindByCode)
+    .put(tripsController.tripsUpdateTrip);
 
 module.exports = router;
