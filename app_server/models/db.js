@@ -25,15 +25,17 @@ const gracefulShutdown = msg => {
   });
 };
 
+// nodemon restart
 process.once('SIGUSR2', () => {
   gracefulShutdown('nodemon restart');
   process.kill(process.pid, 'SIGUSR2');
 });
 
+// app termination
 process.on('SIGINT', () => {
   gracefulShutdown('app termination');
   process.exit(0);
 });
 
-// 
-require('./trips'); // 
+// import schema
+require('./travlr');
